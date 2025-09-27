@@ -23,7 +23,7 @@ export class OrdersController {
   async findAll( @Query() orderPaginationDto: OrderPaginationDto ) {
     try {
       const orders = await firstValueFrom(
-        this.client.send('findAllOrders', orderPaginationDto)
+        this.client.send('findAllOrderss', orderPaginationDto)
       )
       return orders;
 
